@@ -39,8 +39,8 @@ class NewsViewModelImpl: ObservableObject, NewsViewModel {
                 case .failure(let error):
                     strongSelf.state = .failed(error: error)
                 }
-            } receiveValue: { response in
-                self.articles = response.articles
+            } receiveValue: { [weak self] response in
+                self?.articles = response.articles
             }
             
         cancellables.insert(cancellable)
