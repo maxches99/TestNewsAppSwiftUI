@@ -23,7 +23,7 @@ struct HomeView: View {
                     List(articles) { item in
                         ArticleView(article: item)
                     }
-                    .navigationTitle(Text("Эти ебучие новости"))
+                    .navigationTitle(Text("Эти ебаные новости"))
                 }
             }
         }.onAppear(perform: {
